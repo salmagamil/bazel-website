@@ -1,0 +1,820 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo_img{
+  width: 95px;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent ;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  height: 12%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ccc; 
+  
+  
+}
+
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 190px;
+  padding-top: 20px;
+
+
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: 218px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+
+.navbar .nav-links li {
+  margin-left: 1rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  width: 25px;
+  /* padding-right: 10px; */
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.navbar .nav-links a:hover {
+  color: #007BFF;
+}
+.icons{
+  display: flex; 
+  color: white; 
+  padding-left: 30px;
+  border-left: (1px solid #ccc);
+} 
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  /* background: url ('../images/hero.jpg') center center/cover no-repeat ; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image:url(../img/bg-image-28.jpg) ;
+  position: relative;
+  overflow: hidden;
+  padding: 0 1rem;  
+  filter: brightness(40%);
+  background-size: cover;
+  
+} 
+
+.hero-content{
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+
+}
+
+.hero-content h1 {
+  font-size: 6.5rem;
+  margin-bottom: 1rem; 
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #007BFF;
+} 
+
+
+
+/* home2 */ 
+.home_two {
+  height: 100vh;
+  /* background: url ('../images/hero.jpg') center center/cover no-repeat ; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image:url(../img/bg-image-29.jpg) ;
+  position: relative;
+  overflow: hidden;
+  padding: 0 1rem;  
+  color: white;
+  background-size: cover;
+  
+} 
+
+.home_content{
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+
+}
+
+.home_content h1 {
+  font-size: 6.5rem; 
+  color: #fff; 
+  
+}
+
+.home_two.home_content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  
+}
+.bb{
+  padding-top: 30px;
+}
+
+.btn_t {
+  padding: 0.75rem 1.5rem;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+}
+
+.btn_t:hover {
+  background: #0056b3;
+}
+
+.btn-outline_t {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline_t:hover {
+  background: #fff;
+  color: #007BFF;
+}
+
+
+/* Sections */
+.section {
+  padding: 4rem 1rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Team Section */
+.creative-team-title-wrapper {
+  position: relative; /* For positioning the pseudo-element */
+  display: block; /* Change from inline-block to block */
+  text-align: center; /* Add this to center the title within the wrapper */
+  margin: 0 auto; /* Add this to center the wrapper itself */
+}
+
+.creative-team-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  position: relative; /* Ensure title text is above the 'C' */
+  z-index: 2;
+}
+
+.creative-team-title-wrapper::before {
+  content: "C";
+  font-size: 6em; /* Changed from 10em to 6em - adjust as needed */
+  font-weight: bold;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.creative-team-subtitle {
+  font-size: 1em;
+  color: #777;
+  text-align: center; /* Center the subtitle */
+  margin-bottom: 40px; /* Added margin-bottom */
+}
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-member {
+  width: 250px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.team-member img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 183, 234, 0.9); /* blue overlay */
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+}
+
+/* Social icons - top left */
+.overlay .social-icons {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.overlay .social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.overlay .social-icons a:hover {
+  color: #111;
+}
+
+/* Name and position - bottom left */
+.overlay .info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  text-align: left;
+}
+
+.overlay .info h3 {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.overlay .info p {
+  margin: 4px 0 0;
+  font-size: 14px;
+} 
+
+/* ==========================================================================
+   5.  Services Section (Adjusted)
+   ========================================================================== */
+
+#services {
+  background-color: #333;
+  color: #fff;
+  padding-top: 4rem; /* Reduced padding */
+  padding-bottom: 4rem; /* Added padding to bottom */
+}
+
+.services-list-one{
+  margin-top: 25px;
+  list-style: none;
+
+}
+.services-list-two{
+  margin-top: 20px;
+  margin-right: 150px;
+  list-style: none;
+}
+/* Features Bar (Inside Services) */
+#services .features-bar {
+  background-color: transparent; /* No background */
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 2rem; /* Add space below the features bar */
+}
+
+#services .features-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#services .features-container span {
+  font-size: 0.9rem;
+  color: #fff; /* White text */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#services .services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#services .services-text {
+  padding-right: 2rem;
+  font-size: 2rem;
+}
+
+#services .section-title-wrapper .section-title {
+  color: #fff;
+}
+
+#services .services-text p {
+  color: #ddd;
+  padding-left: 13rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 550px; /* Adjust this value */
+}
+
+#services .services-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+#services .services-list {
+  
+  /* margin-top: 8rem; */
+  padding: 0;
+}
+
+#services .services-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#services .services-list li i {
+  margin-right: 0.5rem;
+  /* New styles to create the filled circle with white check */
+  color: #fff; 
+  background-color: #333; 
+  /* border: 2px solid #333; */
+  padding: 0em; 
+  font-size: 0.8em; 
+  text-align: center; 
+  width: calc(1.2em + 4px); 
+  height: calc(1.2em + 4px);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title-wrapper.section-title::before{
+   content: "W";
+  font-size: 6em; /* Changed from 10em to 6em - adjust as needed */
+  font-weight: bold;
+  color: #e1e1e1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+
+}
+
+
+/* Pricing Section */
+.Cheap-Prices-title-wrapper {
+  position: relative; 
+  display: flex; 
+  text-align: center; 
+  margin: 0 auto; 
+}
+
+.Cheap-Prices-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  position: relative; /* Ensure title text is above the 'C' */
+  z-index: 2;
+}
+
+.Cheap-Prices-title-wrapper::before {
+  content: "C";
+  font-size: 6em; /* Changed from 10em to 6em - adjust as needed */
+  font-weight: bold;
+  color: #e1e1e1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.Cheap-Prices-subtitle {
+  font-size: 1em;
+  color: #777;
+  text-align: center; /* Center the subtitle */
+  margin-bottom: 40px; /* Added margin-bottom */
+}
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  width: 250px; /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative; /* For absolute positioning of the label */
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.pricing-card p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.pricing-card p .currency {
+  font-size: 0.6em; /* Make the dollar sign smaller */
+  vertical-align: top; /* Move it slightly up */
+  margin-right: 0.2em; /* Add a small space to the right */
+}
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing-card ul li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff; /* Default button color */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the "Best Value" card */
+.best-value-card {
+  border-color: #00b7eb; /* Blue border */
+  box-shadow: 0 8px 16px rgba(0, 183, 235, 0.3); /* More prominent shadow */
+  transform: translateY(-10px); /* Slightly raised */
+    /* Make the "Best Value" card larger */
+  width: 330px; /* Increased width */
+  padding: 3rem; /* Increased padding */
+}
+
+/* "Best Value" label */
+.best-value-card .best-value-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00b7eb; /* Blue background for label */
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Blue price for "Best Value" */
+.best-value-card p.best-value-price {
+  color: #00b7eb;
+}
+
+/* Blue button for "Best Value" */
+.best-value-card .btn.best-value-button {
+  background-color: #00b7eb;
+}
+
+.best-value-card .btn.best-value-button:hover {
+  background-color: #0084b8;
+}
+
+/* Contact Section */
+/* form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  align-self: flex-start;
+}
+
+/* Rotating Word Animation */
+/* .rotating-word { */
+  /* color: #00b7eb; Matches your blue theme */
+  /* display: inline-block;
+  position: relative;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade {
+  animation: fade 4s infinite;
+}  */
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0; /* Remove container padding */
+  align-items: stretch;
+  height: 500px;
+  position: relative;
+  
+}
+
+.contact-map {
+  flex: 0 0 50%; /* Fixed 50% width */
+  order: 1;
+  width: 700px;
+  height: 550px;
+  filter: brightness(60%);
+   /* Remove padding from map */
+  
+}
+
+.contact-form {
+  flex: 1;
+  order: 2;
+  width: 50%;
+  padding-left: 40px;
+  /* position: relative;  Removed this from here */
+}
+
+
+.contact-form-header {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+}
+
+.contact-details-title-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+}
+
+.contact-details-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.contact-details-title-wrapper::before {
+  content: "G";
+  font-size: 4em;
+  font-weight: bold;
+  color: #e4e3e3;
+  position: absolute;
+  top: -25%;
+  left: 0;
+  transform: none;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.contact-details-subtitle {
+  font-size: 1em;
+  color: #777;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+  height: 100%;
+}
+
+/* Adjustments for the map iframe */
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block; /* Ensure no extra bottom spacing from inline elements */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-map,
+  .contact-form {
+    width: 100%;
+    height: 300px;
+  }
+
+  .contact-form-header {
+    position: static;
+    text-align: center;
+    padding: 0;
+  }
+
+  .contact-details-title-wrapper {
+    text-align: center;
+  }
+
+  .contact-details-subtitle {
+    text-align: left;
+  }
+
+  .contact-form form {
+    margin-top: 20px;
+  }
+}
+/* Rotating Word Animation */
+.rotating-word {
+  color: #00b7eb; /* Matches your blue theme */
+  display: inline-block;
+  position: relative;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fade {
+  animation: fade 4s infinite;
+}
+.card-text{
+  font-weight: 200;
+}
+.card-title{
+  font-weight: bold;
+}
+.card-img-top{
+  width: 100px; 
+  padding-right: 20px;
+  margin-left: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.card-groupp{
+  padding-bottom: 400px;
+  padding-top: 300px;
+  display: flex;
+}

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bezel</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Add Montserrat font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    .rotating-word {
+      color: #00b7eb; /* Blue color to match your design */
+      display: inline-block;
+      /* min-width will be set dynamically in JS */
+    }
+    @keyframes fade {
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .fade {
+      animation: fade 4s infinite;
+    }
+    /* Styling for the "Who We Are" section */
+    #about {
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      align-items: center; /* Vertical centering */
+      justify-content: center; /* Horizontal centering */
+      text-align: center; /* Center text within the container */
+      padding: 0 1rem; /* Small padding for mobile */
+    }
+    #about .container {
+      max-width: 800px; /* Limit the width of the content */
+    }
+    #about h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700; /* Bold for heading */
+      font-size: 1.5rem;
+      color: #333; /* Dark gray/black for heading */
+      text-transform: uppercase;
+      margin-bottom: 1.5rem; /* Increased spacing below heading */
+    }
+    #about p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400; /* Regular weight for body text */
+      font-size: 1.1rem;
+      color: #666; /* Lighter gray for body text */
+      line-height: 1.6;
+      margin-bottom: 2rem; /* Space before the button */
+    }
+    /* Style the "Read More" button */
+    #about .btn {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid #666; /* Border to match the image */
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    #about .btn:hover {
+      background: #666;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo"><img class="logo_img" src="img/logo-light.png" alt="bezel Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+        
+        <div class="icons">
+            <li class="nav_border"> <i class="fa-solid fa-border-right"></i></li>
+            <li><i class="fa-brands fa-facebook-f"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+
+        </div> 
+      
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/bg-image-28.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/bg-image-29.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button> -->
+    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+ /
+
+    
+    
+    <!-- <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div> -->
+  <!-- </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" ;">
+    <div class="co"></div>
+    <div class="hero-content">
+      <h1>Get Awesome.</h1>
+      <p>We are an innovative company making digital stuff.</p>
+      <a href="#about" class="btn">Read More</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </div>
+  </section> 
+
+  <!-- home section 2 -->
+   <section id="home_two" class="home_two">
+    <div class="home_content">
+        <h1>Create With Bazel.</h1>
+      <p>we help ambitious companies creat new value</p>
+      <div class="bb">
+          <a href="#about" class="btn_t">Hire Us</a>
+      <a href="#contact" class="btn btn-outline_t">Services</a>
+
+  
+    
+
+    </div>
+
+
+
+
+   </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Who We Are</h2>
+      <p>We are an innovative company. We develop and design <span class="rotating-word"></span> for customers around the world. Our clients are some of the most forward-looking companies in the world.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="creative-team-title-wrapper">
+        <h2 class="creative-team-title">Creative Team</h2>
+      </div>
+      <p class="creative-team-subtitle">We are digital thinkers</p>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="img/team-1.jpg" alt="Team Member 1">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="info">
+              <h3>Luke Cage</h3>
+              <p>Founder & CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="img/team-2.jpg" alt="Team Member 2">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="info">
+              <h3>Jessica Jones</h3>
+              <p>Product Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="img/team-3.jpg" alt="Team Member 3">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="info">
+              <h3>Matt Murdock</h3>
+              <p>Lead Developer</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="img/team-4.jpg" alt="Team Member 4">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="info">
+              <h3>Claire Temple</h3>
+              <p>Sales Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Services Section -->
+  <section id="services" class="section">
+     <div class="container">
+       <div class="features-bar">  <div class="features-container">
+           <span>STUNNING DESIGN</span>
+           <span>TIME SAVER</span>
+           <span>CLEAN CODE</span>
+           <span>CUSTOMIZABLE</span>
+           <span>PERFECT LAYOUT</span>
+           <span>RETINA READY</span>
+         </div>
+       </div>
+       <div class="services-grid">
+         <div class="services-text">
+           <div class="section-title-wrapper">
+             <h2 class="section-title">What We Do.</h2>
+           </div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsam ullam incidunt itaque nemo
+             omnis temporibus totam quibusdam repellat vero,
+             recusandae excepturi dignissimos velit et alias amet,
+             quia facilis perferendis .</p>
+         </div>
+         <div class="services-lists">
+           <ul class="services-list-one">
+             <li><i class="fa-regular fa-circle-check"></i> Research</li>
+             <li><i class="fa-regular fa-circle-check"></i> Opportunity Analysis</li>
+             <li><i class="fa-regular fa-circle-check"></i> Consulting</li>
+             <li><i class="fa-regular fa-circle-check"></i> Brand Planning</li>
+             <li><i class="fa-regular fa-circle-check"></i> Customer Support</li>
+           </ul>
+           <ul class="services-list-two">
+             <li><i class="fa-regular fa-circle-check"></i> Logo & Branding</li>
+             <li><i class="fa-regular fa-circle-check"></i> Style guides</li>
+             <li><i class="fa-regular fa-circle-check"></i> Motion graphics</li>
+             <li><i class="fa-regular fa-circle-check"></i> UX/UI-design</li>
+             <li><i class="fa-regular fa-circle-check"></i> Social media design</li>
+           </ul>
+         </div>
+       </div>
+     </div>
+  </section>    
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section" style="background-color: #f0f0f0;">
+    <div class="container">
+      <div class="Cheap-Prices-title-wrapper">
+        <h2 class="Cheap-Prices-title">Cheap Prices</h2>
+      </div>
+      <p class="Cheap-Prices-subtitle">We provide the best quality.</p>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p><span class="currency">$</span>9</p>
+          <ul>
+            <li>Unlimited Connections</li>
+            <li>24/7 Support</li>
+            <li>Full SSL Protection</li>
+            <li>Unlimited Channels</li>
+          </ul>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Silver</h3>
+          <p><span class="currency">$</span>19</p>
+          <ul>
+            <li>Unlimited Connections</li>
+            <li>24/7 Support</li>
+            <li>Full SSL Protection</li>
+            <li>Unlimited Channels</li>
+          </ul>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+        <div class="pricing-card best-value-card"> <div class="best-value-label">Best Value</div> <h3>Gold</h3>
+          <p class="best-value-price"><span class="currency">$</span>29</p> <ul>
+            <li>Unlimited Connections</li>
+            <li>24/7 Support</li>
+            <li>Full SSL Protection</li>
+            <li>Unlimited Channels</li>
+          </ul>
+          <a href="#" class="btn best-value-button">Sign Up</a> </div>
+        <div class="pricing-card">
+          <h3>Platinum</h3>
+          <p><span class="currency">$</span>49</p>
+          <ul>
+            <li>Unlimited Connections</li>
+            <li>24/7 Support</li>
+            <li>Full SSL Protection</li>
+            <li>Unlimited Channels</li>
+          </ul>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+
+
+
+  <div class="card-groupp">
+  <div class="card">
+    <img src="img/testimonial-1.jpg" class="card-img-top" alt="photo">
+    <div class="card-body">
+      <h4 class="card-title">Marrisa mayer</h4>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia odio aperiam vel quam. Aliquid laborum voluptates modi voluptas nisi vero, iure quidem qui eaque.</p>
+      
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/testimonial-2.jpg" class="card-img-top" alt="photo">
+    <div class="card-body">
+      <h5 class="card-title">Mark zuckerburg</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis, non nemo eaque quo blanditiis rem eos quod consequuntur autem soluta ea laborum mollitia doloribus architecto commodi sint quis amet.</p>
+     
+  </div>
+  
+  </div>
+</div>
+
+  <!-- Contact Section -->
+  <!-- <section id="contact" class="section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Phone Number" />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const words = ["Apps", "Websites", "Softwares"];
+    const rotatingWord = document.querySelector(".rotating-word");
+    let index = 0;
+    let charIndex = 0;
+    let currentWord = "";
+    let isTyping = true;
+    let isDeleting = false;
+
+    // Function to dynamically set min-width based on current word length
+    function setDynamicWidth() {
+      const tempSpan = document.createElement("span");
+      tempSpan.style.visibility = "hidden";
+      tempSpan.style.position = "absolute";
+      tempSpan.style.font = window.getComputedStyle(rotatingWord).font; // Match font
+      tempSpan.textContent = currentWord || " "; // Use current word or a space as fallback
+      document.body.appendChild(tempSpan);
+      const width = tempSpan.offsetWidth;
+      document.body.removeChild(tempSpan);
+      rotatingWord.style.minWidth = `${width}px`;
+    }
+
+    function typeWriter() {
+      if (isTyping) {
+        // Typing phase
+        if (charIndex < words[index].length) {
+          currentWord += words[index][charIndex];
+          rotatingWord.textContent = currentWord;
+          setDynamicWidth(); // Update width for each character
+          charIndex++;
+          setTimeout(typeWriter, 150); // Speed of typing each character (150ms)
+        } else {
+          isTyping = false;
+          isDeleting = true;
+          setTimeout(typeWriter, 1000); // Pause after word is fully typed (1s)
+        }
+      } else if (isDeleting) {
+        // Deleting phase
+        if (charIndex > 0) {
+          currentWord = currentWord.slice(0, -1);
+          rotatingWord.textContent = currentWord;
+          setDynamicWidth(); // Update width as characters are deleted
+          charIndex--;
+          setTimeout(typeWriter, 100); // Speed of deleting each character (100ms)
+        } else {
+          isDeleting = false;
+          index = (index + 1) % words.length; // Cycle to next word
+          isTyping = true;
+          setTimeout(typeWriter, 500); // Pause before typing next word (0.5s)
+        }
+      }
+    } --> 
+
+    <!-- // Start typewriter effect
+    setDynamicWidth(); // Initial call to set initial width
+    typeWriter();
+  </script> -->
+   <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-container">
+      <div class="contact-details">
+      </div>
+      <div class="contact-form">
+        <div class="contact-details-title-wrapper">
+          <h2 class="contact-details-title">Get In Touch</h2>
+        </div>
+        <p class="contact-details-subtitle">Let's work together!</p>
+        <form>
+          <label for="name ">Your name</label>
+          <input type="text"  required id="name" />
+           <label for="email ">Your email</label>
+          <input type="email" required id="email"/>
+           <label for="phone ">Your phone</label>
+          <input type="tel" id="phone" />
+          <label for="message">Your message</label>
+          <textarea required></textarea>
+          <button type="submit" id="message" class="btn">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13818.777878999412!2d31.20082243955078!3d30.008749700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840cba6e8c3b1%3A0xee534b9b696b1919!2sGiza%2C%20Giza%20Governorate!5e0!3m2!1sen!2seg!4v1747555170000!5m2!1sen!2seg"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const words = ["Apps", "Websites", "Softwares"];
+    const rotatingWord = document.querySelector(".rotating-word");
+    let index = 0;
+    let charIndex = 0;
+    let currentWord = "";
+    let isTyping = true;
+    let isDeleting = false;
+
+    // Function to dynamically set min-width based on current word length
+    function setDynamicWidth() {
+      const tempSpan = document.createElement("span");
+      tempSpan.style.visibility = "hidden";
+      tempSpan.style.position = "absolute";
+      tempSpan.style.font = window.getComputedStyle(rotatingWord).font; // Match font
+      tempSpan.textContent = currentWord || " "; // Use current word or a space as fallback
+      document.body.appendChild(tempSpan);
+      const width = tempSpan.offsetWidth;
+      document.body.removeChild(tempSpan);
+      rotatingWord.style.minWidth = `${width}px`;
+    }
+
+    function typeWriter() {
+      if (isTyping) {
+        // Typing phase
+        if (charIndex < words[index].length) {
+          currentWord += words[index][charIndex];
+          rotatingWord.textContent = currentWord;
+          setDynamicWidth(); // Update width for each character
+          charIndex++;
+          setTimeout(typeWriter, 40); // Speed of typing each character (150ms)
+        } else {
+          isTyping = false;
+          isDeleting = true;
+          setTimeout(typeWriter, 1000); // Pause after word is fully typed (1s)
+        }
+      } else if (isDeleting) {
+        // Deleting phase
+        if (charIndex > 0) {
+          currentWord = currentWord.slice(0, -1);
+          rotatingWord.textContent = currentWord;
+          setDynamicWidth(); // Update width as characters are deleted
+          charIndex--;
+          setTimeout(typeWriter, 100); // Speed of deleting each character (100ms)
+        } else {
+          isDeleting = false;
+          index = (index + 1) % words.length; // Cycle to next word
+          isTyping = true;
+          setTimeout(typeWriter, 500); // Pause before typing next word (0.5s)
+        }
+      }
+    }
+
+    // Start typewriter effect
+    setDynamicWidth(); // Initial call to set initial width
+    typeWriter();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+</body>
+</html>
